@@ -6,7 +6,7 @@ from django.urls import reverse
 from .models import *
 from .forms import *
 from fbrecog import recognize
-
+import os
 # Create your views here.
 
 def index(request):
@@ -23,5 +23,7 @@ def index(request):
             fb_dtsg = 'AQEYXpAjE-jd:AQEraNy2nfGo' #Insert the fb_dtsg parameter obtained from Form Data here.
             message=recognize(path,access_token,cookie,fb_dtsg)
             print(message)
+            os.remove(path)
     return render(request, 'face/index.html', {'form':form, 'message':message})
+
 # Create your views here.
