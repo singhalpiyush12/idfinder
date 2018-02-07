@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^face/', include('face.urls', namespace='face')),
+    url(r'^', include('face.urls', namespace='face')),
 ]
 
 
