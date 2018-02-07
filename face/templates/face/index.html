@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="." method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    Select image to upload:
+    {{ form }}
+    <input type="submit" name="submit">
+</form>
+<h2>{{ message }}</h2>
+</body>
+</html>
