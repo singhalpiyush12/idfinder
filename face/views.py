@@ -23,7 +23,7 @@ def index(request):
             fb_dtsg = 'AQF4XtsTrm8p:AQHu10Nw0E2K' #Insert the fb_dtsg parameter obtained from Form Data here.
             message=recognize(path,access_token,cookie,fb_dtsg)
             print(message)
-            os.remove(path)
+            #os.remove(path)
     return render(request, 'face/index.html', {'form':form, 'message':message})
 
 # Create your views here.
